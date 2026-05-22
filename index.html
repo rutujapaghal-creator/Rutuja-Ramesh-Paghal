@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Dashboard</title>
+</head>
+
+<body><h1>Personal Dashboard - Rutuja Paghal</h1>
+</header><div class="container"><div class="card profile">
+<p><b>Name:</b> Rutuja Paghal</p>
+<p><b>Course:</b> Engineering Student</p>
+<p><b>Email:</b> rutuja@email.com</p>
+<p><b>Location:</b> sambhaji nagar, india </p>
+</div>
+</div><div class="card">
+<h2>About Me</h2>
+<p>I am an engineering student interested in technology and innovation. I enjoy learning programming and participating in hackathons. My goal is to become a successful software engineer and build useful technology solutions.</p>
+</div><div class="card">
+<h2>Skills</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Basic Python</li>
+<li>Communication</li>
+<li>Teamwork</li>
+<li>Problem Solving</li>
+</ul>
+</div><div class="card">
+<h2>Short-Term Goals (1 Year)</h2>
+<ul>
+<li>Learn web development</li>
+<li>Improve coding skills</li>
+<li>Participate in hackathons</li>
+<li>Complete online certifications</li>
+</ul>
+</div><div class="card">
+<h2>Long-Term Goals (4 Years)</h2>
+<ul>
+<li>Become a software engineer</li>
+<li>Get placement in a good company</li>
+<li>Build innovative tech projects</li>
+<li>Start a tech startup</li>
+</ul>
+</div><div class="card"></div></div>
+</body>
+</html>
+<button onclick="goToForm()">Edit Profile</button>
+
+<script>
+function goToForm() {
+    window.location.href = "form.html";
+}
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Form</title>
+</head>
+
+<body>
+
+<h2>Enter Your Details</h2>
+
+<form onsubmit="return validateForm()">
+    
+    <label>Name:</label><br>
+    <input type="text" id="name"><br><br>
+
+    <label>Email:</label><br>
+    <input type="text" id="email"><br><br>
+
+    <label>Course:</label><br>
+    <input type="text" id="course"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+<style>
+body {
+    background-color: #f0f8ff; /* light blue */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+</style>
+<style>
+body {
+    background-color: #fff3e0; /* light orange */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    margin: 50px auto;
+    width: 300px;
+    border-radius: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+}
+
+button {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+</style>
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let course = document.getElementById("course").value;
+
+    // Simple validations
+    if (name == "") {
+        alert("Name cannot be empty");
+        return false;
+    }
+
+    if (email == "") {
+        alert("Email cannot be empty");
+        return false;
+    }
+
+    if (!email.includes("@")) {
+        alert("Enter a valid email");
+        return false;
+    }
+
+    if (course == "") {
+        alert("Course cannot be empty");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+
+    // Redirect back to dashboard
+    window.location.href = "index.html";
+
+    return false; // prevent actual form submission
+}
+</script>
+
+</body>
+</html>
